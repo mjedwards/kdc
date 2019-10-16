@@ -1,0 +1,451 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+section {
+  width: 100%;
+}
+#hidden {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+div.scrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background: lightblue;
+}
+div.scrollToTop i {
+  font-size: 1.5rem;
+}
+button {
+  border: 1px solid black;
+  cursor: pointer;
+}
+header {
+  z-index: 4;
+  height: 100vh;
+}
+header a img#bl-logo {
+  width: 15%;
+  height: 60px;
+  z-index: 3;
+}
+.hamburger {
+  display: inline-block;
+  z-index: 4;
+  position: absolute;
+  right: 35px;
+  top: 15px;
+}
+.hamburger .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #000000;
+  transition: all 0.7s ease-out;
+  right: 35px;
+  top: 15px;
+}
+.hamburger.close {
+  transform: rotate(180deg);
+}
+.hamburger.close .btn-line:nth-child(1) {
+  background: white;
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.close .btn-line:nth-child(3) {
+  background: white;
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+.menu {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 30%;
+  opacity: 1;
+  visibility: hidden;
+}
+.menu #logo {
+  height: 200px;
+  width: 200px;
+}
+.menu.showing {
+  visibility: visible;
+  z-index: 3;
+  display: flex;
+}
+.menu-branding,
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.7s ease-out;
+}
+.menu-nav.showing {
+  transform: translate3d(0, 0, 0);
+  z-index: 2;
+}
+.menu .nav-item {
+  transform: translate3d(600px, 0, 0);
+  transition: all 0.7s ease-out;
+}
+.menu .nav-item.showing {
+  transform: translate3d(0, 0, 0);
+}
+.menu .nav-item.current > a {
+  color: red;
+}
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #ffffff;
+  transition: all 0.7s ease-out;
+}
+.menu .nav-link:hover {
+  filter: invert(50%);
+  transition: all 0.7s ease-out;
+}
+.menu .nav-link {
+  text-decoration: none;
+}
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+section.hero {
+  background: url("/images/architecture-beautiful-exterior-106399.jpg");
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 50vh;
+}
+footer div.footer-menu nav ul li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+footer div.footer-menu nav ul li a {
+  color: white;
+}
+footer div.social-ctn {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+footer div.social-ctn img.footer-logo {
+  width: 70%;
+  margin-bottom: 30px;
+}
+footer div.social-ctn div.social-links {
+  margin-bottom: 30px;
+}
+footer div.social-ctn div.social-links a {
+  color: white;
+}
+footer div.social-ctn div.social-links a i {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+footer div.social-ctn a {
+  color: white;
+}
+footer div.misc {
+  display: flex;
+  flex-flow: column;
+}
+footer div.misc a {
+  color: white;
+  margin-bottom: 30px;
+}
+section.home-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+section.home-info h3 {
+  font-size: 3rem;
+}
+section.home-info hr {
+  width: 15%;
+  background: black;
+}
+section.home-info p {
+  width: 50%;
+  text-align: center;
+  line-height: 3rem;
+}
+section.home-info div.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 80px 50px;
+}
+section.home-info div.img-container div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+section.home-info div.img-container div img.img-display {
+  width: 70%;
+}
+section.home-info button {
+  border: 1px solid black;
+  width: 25%;
+  height: 2rem;
+  font-size: 1rem;
+}
+section.home-info button:hover {
+  background-color: black;
+  color: white;
+}
+section.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  background: url('/images/aerial-photography-aerial-shot-aerial-view-1546166.jpg');
+}
+section.portfolio button {
+  color: white;
+  width: 20%;
+  height: 4rem;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section.portfolio button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+section.service-area {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  height: 500px;
+}
+section.service-area h3 {
+  font-size: 3rem;
+}
+section.service-area hr {
+  width: 15%;
+  background: black;
+}
+section.service-area p {
+  width: 50%;
+  text-align: center;
+  line-height: 3rem;
+}
+section.service-area div {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+section.service-area div .serv-area {
+  width: 20%;
+  height: 75%;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+section.service-area div .broward {
+  background: url('/images/architectural-design-architecture-daylight-1834739.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.service-area div .orange {
+  background: url('/images/architecture-daylight-driveway-277667.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.service-area div .dade {
+  background: url('/images/architecture-concrete-daylight-2102587.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.service-area div .palm {
+  background: url('/images/architecture-chair-color-1080696.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

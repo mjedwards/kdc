@@ -1,0 +1,143 @@
+section.home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    hr {
+        width: 15%;
+        background: black;
+    }
+
+    p {
+        width: 50%;
+        text-align: center;
+        line-height: 3rem;
+    }
+
+    div.img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 80px 50px;
+
+        div {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            img.img-display {
+                width: 70%;
+            }
+        }
+    }
+
+    button {
+        border: 1px solid black;
+        width: 25%;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+section.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background: url('/images/aerial-photography-aerial-shot-aerial-view-1546166.jpg');
+
+    button {
+        color: white;
+        width: 20%;
+        height: 4rem;
+        font-size: 1.5rem;
+        background-color: fade(black, 50%)
+    }
+
+    button:hover {
+        background-color: fade(white, 50%);
+        color: black;
+    }
+}
+
+section.service-area {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    height: 500px;
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    hr {
+        width: 15%;
+        background: black;
+    }
+
+    p {
+        width: 50%;
+        text-align: center;
+        line-height: 3rem;
+    }
+
+    div {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+        .serv-area {
+            width: 20%;
+            height: 75%;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .broward {
+            background: url('/images/architectural-design-architecture-daylight-1834739.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .orange {
+            background: url('/images/architecture-daylight-driveway-277667.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dade {
+            background: url('/images/architecture-concrete-daylight-2102587.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .palm {
+            background: url('/images/architecture-chair-color-1080696.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
